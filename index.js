@@ -213,7 +213,51 @@ function reportCard(percentage){
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-
+function rockPaperScissors() {
+    let playersChoice = window.prompt("Choose your weapon....rock paper or scissors")
+      let computersChoice = Math.random();
+  console.log(computersChoice);
+    if (computersChoice < .34){
+        computersChoice = 'rock';
+    } else if (computersChoice < .67){
+        computersChoice = 'paper';
+    } else {
+        computersChoice = "scissors";
+    }
+    console.log('Your choice is ' + playersChoice)
+    console.log( 'The computers choice is ' + computersChoice)
+    //player chooses rock
+    if (playersChoice === 'rock' && computersChoice === 'rock'){
+         return 'TIE';
+    }
+      if (playersChoice === 'rock' && computersChoice ==='paper'){
+        return 'PAPER BEATS ROCK';
+    }
+    if (playersChoice === 'rock' && computersChoice === 'scissors'){
+        return 'ROCK BEATS SCISSORS';
+    }
+      //player chooses paper
+      else if (playersChoice === 'paper' && computersChoice === 'rock'){
+        return "PAPER BEATS ROCK";
+    }
+     else if (playersChoice === 'paper' && computersChoice === 'paper'){
+        return "TIE";
+    }
+     else  if (playersChoice === 'paper' && computersChoice === 'scissors'){
+        return "SCISSORS BEATS PAPER";
+    }
+    //player chooses scissors
+     else if (playersChoice === 'scissors' && computersChoice === 'rock'){
+        return "ROCK BEATS SCISSORS";
+    }
+      else  if (playersChoice === 'scissors' && computersChoice ===  'paper'){
+        return 'SCISSORS BEATS PAPER';
+    }
+      else if (playersChoice === 'scissors' && computersChoice === 'scissors'){
+        return 'TIE'
+    }
+    
+}
 
 
 
