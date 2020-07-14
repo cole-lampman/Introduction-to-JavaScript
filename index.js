@@ -93,8 +93,9 @@ const dogYears = (age) => age * 7;
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-function rockPaperScissors(playersChoice) {
-  let computersChoice = Math.random();
+function rockPaperScissors() {
+    let playersChoice = window.prompt("Choose your weapon....rock paper or scissors")
+      let computersChoice = Math.random();
   console.log(computersChoice);
     if (computersChoice < .34){
         computersChoice = 'rock';
@@ -157,7 +158,7 @@ const feetToCM = (feet) => feet / 0.032808;
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 function annoyingSong(numberOfBottles){
-    for(let i = numberOfBottles; i >=1 ; i--){
+    for(let i = numberOfBottles; i >=0 ; i--){
         if(i === 0 ){
             console.log('you are out of soda =[ ')
         }
